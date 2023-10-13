@@ -56,6 +56,9 @@ TagManager:
   - name: Enemy
     uniqueID: 2171117445
     locked: 0
+  - name: puzzles
+    uniqueID: 3953991905
+    locked: 0
   - name: Hazards
     uniqueID: 3059078631
     locked: 0

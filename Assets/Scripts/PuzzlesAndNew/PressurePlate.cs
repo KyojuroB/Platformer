@@ -5,6 +5,7 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     bool isDown = false;
+    bool istouching = false;
     Animator myanim;
     BoxCollider2D triggerCollider;
   
@@ -17,29 +18,32 @@ public class PressurePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (triggerCollider.IsTouchingLayers(LayerMask.GetMask("Player")))
+        if (triggerCollider.IsTouchingLayers(LayerMask.GetMask("Player")) && istouching==false)
         {
-            Debug.Log("Touched");
+            
             if (!isDown)
             {
                 myanim.SetBool("isDown", true);
                 isDown = true;
-                new WaitForSeconds(3);
+                istouching = true;
                 return;
             }
             else
             {
                 myanim.SetBool("isDown", false);
                 isDown = false;
-                new WaitForSeconds(3);
+                istouching = true;
                 return;
             }
-
-
-         
-
-
         }
-
+        if (triggerCollider.IsTouchingLayers(LayerMask.GetMask("Player")) == false)
+        {
+            istouching = false;
+        }
     }
+    public bool IsOn()
+    {
+        return isDown;
+    }
+
 }
