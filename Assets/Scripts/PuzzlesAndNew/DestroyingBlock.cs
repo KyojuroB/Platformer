@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class DestroyingBlock : MonoBehaviour
 {
     [SerializeField] GameObject triggerobj;
-    BoxCollider2D myCollider;
-    SpriteRenderer sr;
+    TilemapCollider2D mtc;
+    Tilemap sr;
     // Start is called before the first frame update
     void Start()
     {
-        myCollider = GetComponent<BoxCollider2D>();
-        sr = GetComponent<SpriteRenderer>();
+        mtc = GetComponent<TilemapCollider2D>();
+        sr = GetComponent<Tilemap>();
     }
 
 
@@ -22,12 +23,12 @@ public class DestroyingBlock : MonoBehaviour
 
         if (triggerobj.GetComponent<PressurePlate>().IsOn())
         {
-            myCollider.enabled = false;
-            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.5f);
+            mtc.enabled = false;
+            sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 0.3f);
         }
         if (!triggerobj.GetComponent<PressurePlate>().IsOn())
         {
-            myCollider.enabled = true;
+            mtc.enabled = true;
             sr.color = new Color(sr.color.r, sr.color.g, sr.color.b, 1f);
 
         }

@@ -60,6 +60,7 @@ public class GameSession : MonoBehaviour
     private void TakeLives()
     {
         playerLives--;
+        
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         livesText.text = playerLives.ToString();
         SceneManager.LoadScene(currentSceneIndex);
@@ -68,6 +69,7 @@ public class GameSession : MonoBehaviour
 
     private void ResetGameSession()
     {
+        
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
