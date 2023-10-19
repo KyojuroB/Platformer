@@ -11,12 +11,12 @@ public class GameSession : MonoBehaviour
     [SerializeField] int playerLives = 3;
     [SerializeField] int score = 0;
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] TMP_Text livesText;
+
 
 
     private void Start()
     {
-       livesText.text = playerLives.ToString();
+
        scoreText.text = score.ToString();
 
     }
@@ -60,9 +60,9 @@ public class GameSession : MonoBehaviour
     private void TakeLives()
     {
         playerLives--;
-        
+        FindObjectOfType<HealthBar>().remove();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        livesText.text = playerLives.ToString();
+        
         SceneManager.LoadScene(currentSceneIndex);
 
     }

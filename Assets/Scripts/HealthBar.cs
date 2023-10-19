@@ -14,11 +14,13 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<GameSession>().GetHealth() > transform.childCount)
-        {
-            transform.GetChild(current).gameObject.SetActive(false);
-            current++;
-        }
+
+    }
+    public void remove()
+    {
+        Debug.Log("Kill");
+        transform.GetChild(current).gameObject.SetActive(false);
+        current++;
     }
     public void Re()
     {

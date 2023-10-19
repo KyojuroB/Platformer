@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa95871d977f4bd42a444e7167b5cffb
+guid: ba82a1969458e3b44a9f829cc07d0ba2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,12 +45,12 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -162,7 +162,154 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel_0
+      name: PANDA ANIM FINAL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a66ea13e21154d41868ea1d3bcd6f2b
+      internalID: -1228721136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b27a1946f7de4d43b0479e18bd0f81d
+      internalID: -1245789030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88550eef72445747af9618ae86cb628
+      internalID: 131364068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9b3da271ae1ff45abf1093d495cbfb
+      internalID: 172558616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b1c428d3d12c14d80f586ab201bde7
+      internalID: 1772530831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b721f23dff3930e4a8d17729ca037be7
+      internalID: -450126610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3983c8dc10ced84482ca7abbdd054a0
+      internalID: 2107015514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_7
       rect:
         serializedVersion: 2
         x: 0
@@ -176,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ead37f02b59f52348a7c49751dfdf639
-      internalID: -268551076
+      spriteID: 36a47312b64fb08499f4da15457eb0ba
+      internalID: -2122790667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_1
+      name: PANDA ANIM FINAL_8
       rect:
         serializedVersion: 2
         x: 32
@@ -197,14 +344,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a3d323bcef79b14ba6e2653168e2910
-      internalID: 801019218
+      spriteID: 05759abc4c382704e965fca81a2820c2
+      internalID: 1034096435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_2
+      name: PANDA ANIM FINAL_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a58386925a0e284a9d4596ce461961b
+      internalID: 1997397185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PANDA ANIM FINAL_10
       rect:
         serializedVersion: 2
         x: 0
@@ -218,14 +386,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee90492703a2f454bb51302a835d9b02
-      internalID: 705429481
+      spriteID: 808ec1edc3144e74c904df0039b57bbe
+      internalID: 1996283499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_3
+      name: PANDA ANIM FINAL_11
       rect:
         serializedVersion: 2
         x: 32
@@ -239,18 +407,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41f68d6d7bdb7cf4bb39c9b46de03e21
-      internalID: 823012842
+      spriteID: 5b3878649c2e16f44836a8378322ec7a
+      internalID: 1425204180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel_4
+      name: PANDA ANIM FINAL_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 96
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -260,29 +428,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b376e6325e1399f40b6a706707b9ee40
-      internalID: -825097846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4567a495307e5840a91c8009c07570e
-      internalID: 401042662
+      spriteID: 2493cc474eca31e48a5b80c89701c955
+      internalID: 551897551
       vertices: []
       indices: 
       edges: []
@@ -298,12 +445,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel_0: -268551076
-      New Piskel_1: 801019218
-      New Piskel_2: 705429481
-      New Piskel_3: 823012842
-      New Piskel_4: -825097846
-      New Piskel_5: 401042662
+      PANDA ANIM FINAL_0: -1228721136
+      PANDA ANIM FINAL_1: -1245789030
+      PANDA ANIM FINAL_10: 1996283499
+      PANDA ANIM FINAL_11: 1425204180
+      PANDA ANIM FINAL_12: 551897551
+      PANDA ANIM FINAL_2: 131364068
+      PANDA ANIM FINAL_3: 172558616
+      PANDA ANIM FINAL_4: 1772530831
+      PANDA ANIM FINAL_5: -450126610
+      PANDA ANIM FINAL_6: 2107015514
+      PANDA ANIM FINAL_7: -2122790667
+      PANDA ANIM FINAL_8: 1034096435
+      PANDA ANIM FINAL_9: 1997397185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (playerHasHorizontaSpeed == true)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x)  * 1.5f, 1.5f);
         }
 
     }
