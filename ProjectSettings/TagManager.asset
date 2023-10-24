@@ -20,8 +20,8 @@ TagManager:
   - Hazards
   - Interactable
   - Coin
-  - 
-  - 
+  - AtackCollider
+  - CubePickUp
   - 
   - 
   - 
@@ -67,6 +67,9 @@ TagManager:
     locked: 0
   - name: Elevator
     uniqueID: 4123487007
+    locked: 0
+  - name: CubePickUp
+    uniqueID: 3357844817
     locked: 0
   - name: Player
     uniqueID: 4220867641

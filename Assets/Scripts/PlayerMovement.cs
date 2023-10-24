@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Properties;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     bool isAlive = true;
     public int health;
 
+    
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -27,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
         bodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravitScaleAtStart = myRigidbody.gravityScale;
+ 
+
     }
 
 
@@ -40,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         FlipSpirte();
         ClimbLadder();
         Die();
-
+        
     }
 
     void OnMove(InputValue value)
@@ -85,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
             myAnimator.SetBool("isClimbing", playerHasSpeed);
               
     }
+
     void Run()
     {
         Vector2 playervelocity = new Vector2(moveInput.x * runSpeed, myRigidbody.velocity.y);
@@ -99,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
     void FlipSpirte()
     {
         bool playerHasHorizontaSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-
+        
         if (playerHasHorizontaSpeed == true)
         {
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x)  * 1.5f, 1.5f);
