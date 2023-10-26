@@ -8,13 +8,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] float speed = 5;
     Animator animator;
     Rigidbody2D rb;
-    CircleCollider2D circleCollider;
+     PolygonCollider2D polyCollider;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        circleCollider = GetComponent<CircleCollider2D>();
+        polyCollider = GetComponent<PolygonCollider2D>();
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
         MoveRight();
         Animation();
         ///////////////
-        if (circleCollider.IsTouchingLayers(LayerMask.GetMask("AtackCollider")) && Input.GetKey(KeyCode.Mouse0))
+        if (polyCollider.IsTouchingLayers(LayerMask.GetMask("AtackCollider")) && Input.GetKey(KeyCode.Mouse0))
         { 
             Destroy(gameObject);
         }

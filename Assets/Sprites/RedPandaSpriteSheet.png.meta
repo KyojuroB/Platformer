@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faed6622352b9c846b2bac12a1998c13
+guid: 554275da37336954e9b8a3b6c5b48289
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,105 +106,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (3)_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 411c3bc0b6403d84a98189440b746ba9
-      internalID: 489381205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (3)_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 849629d77248fbe44af5c557498228d9
-      internalID: 1509380399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (3)_2
+      name: RedPandaSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -218,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd9bd4cc39b48a14985a1f85060badd6
-      internalID: -402799403
+      spriteID: 7973b4a99af2bf141a0ab204907b617b
+      internalID: -637473418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (3)_3
+      name: RedPandaSpriteSheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -239,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f50332cda96fe4c89cd043dbca88ed
-      internalID: 1152864946
+      spriteID: d822cd24591441642b5316230c835818
+      internalID: 965131622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (3)_4
+      name: RedPandaSpriteSheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -260,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be818ea511ec7474cbbdd9b0964f3580
-      internalID: 827706491
+      spriteID: 25e6f5e4c4f1cf7498750fd3bccb0b20
+      internalID: -998559440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: New Piskel (3)_5
+      name: RedPandaSpriteSheet_3
       rect:
         serializedVersion: 2
         x: 32
@@ -281,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28de9c1f91a8c514f8d723509b78889a
-      internalID: 1740451121
+      spriteID: d3ead88c96ab68447bc0bdbc6e5b7227
+      internalID: -861369667
       vertices: []
       indices: 
       edges: []
@@ -298,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      New Piskel (3)_0: 489381205
-      New Piskel (3)_1: 1509380399
-      New Piskel (3)_2: -402799403
-      New Piskel (3)_3: 1152864946
-      New Piskel (3)_4: 827706491
-      New Piskel (3)_5: 1740451121
+      RedPandaSpriteSheet_0: -637473418
+      RedPandaSpriteSheet_1: 965131622
+      RedPandaSpriteSheet_2: -998559440
+      RedPandaSpriteSheet_3: -861369667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

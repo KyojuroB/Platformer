@@ -11,12 +11,13 @@ public class GameSession : MonoBehaviour
     [SerializeField] int playerLives = 3;
     [SerializeField] int score = 0;
     [SerializeField] TMP_Text scoreText;
-
+    [SerializeField] GameObject currentCheckpoint = null;
+    GameObject player;
 
 
     private void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
        scoreText.text = score.ToString();
 
     }
@@ -61,9 +62,17 @@ public class GameSession : MonoBehaviour
     {
         playerLives--;
         FindObjectOfType<HealthBar>().remove();
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         
-        SceneManager.LoadScene(currentSceneIndex);
+       int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+       SceneManager.LoadScene(currentSceneIndex);
+        
+        if (currentCheckpoint != null)
+        {
+            player.transform.position = currentCheckpoint.transform.position;
+            
+            Debug.Log("checkpointWorked");
+        
+        }
 
     }
 
@@ -73,5 +82,9 @@ public class GameSession : MonoBehaviour
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+    public void SetCheckpoint(GameObject obj)
+    {
+        currentCheckpoint = obj;
     }
 }
