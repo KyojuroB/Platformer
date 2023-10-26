@@ -8,17 +8,20 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class GameSession : MonoBehaviour
 {
+
     [SerializeField] int playerLives = 3;
     [SerializeField] int score = 0;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] GameObject currentCheckpoint = null;
-    GameObject player;
-
+    [SerializeField] GameObject player;
+    AsyncOperation asyncLoad;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+       
        scoreText.text = score.ToString();
+   
+
 
     }
     public void AddScore(int num)
@@ -29,7 +32,7 @@ public class GameSession : MonoBehaviour
 
     private void Awake()
     {
-        
+
         int numberOfGameSessions = FindObjectsOfType<GameSession>().Length;
         if (numberOfGameSessions > 1)
         {
@@ -50,7 +53,7 @@ public class GameSession : MonoBehaviour
     {
         if (playerLives > 1)
         {
-            TakeLives();
+            StartCoroutine(TakeLives());  
         }
         else 
         {
@@ -58,20 +61,25 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    private void TakeLives()
+    private IEnumerator TakeLives()
     {
         playerLives--;
         FindObjectOfType<HealthBar>().remove();
-        
-       int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-       SceneManager.LoadScene(currentSceneIndex);
-        
-        if (currentCheckpoint != null)
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        asyncLoad = SceneManager.LoadSceneAsync(currentSceneIndex, LoadSceneMode.Single);
+        //   SceneManager.LoadScene(currentSceneIndex);
+        while (!asyncLoad.isDone)
         {
-            player.transform.position = currentCheckpoint.transform.position;
-            
-            Debug.Log("checkpointWorked");
+            print("Loading the Scene");
+            yield return null;
+        }
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        if (currentCheckpoint != null && player != null)
+        {
         
+            player.transform.position = new Vector2(currentCheckpoint.transform.position.x, currentCheckpoint.transform.position.y + 0.3f);
+             Debug.Log("checkpointWorked");
         }
 
     }

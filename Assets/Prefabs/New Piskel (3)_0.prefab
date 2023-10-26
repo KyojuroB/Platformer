@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5294084589355717589}
   - component: {fileID: 9166276879837410990}
   - component: {fileID: 3338873998241086781}
+  - component: {fileID: 7340516184715088077}
   m_Layer: 0
   m_Name: New Piskel (3)_0
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5294084589355717589
 SpriteRenderer:
@@ -163,3 +164,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7340516184715088077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6221758773793150472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f9d31781e57c54d87dc7ddb23dfa31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

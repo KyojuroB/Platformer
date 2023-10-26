@@ -17,7 +17,7 @@ public class Elevator : MonoBehaviour
     [SerializeField] bool ups = false;
     bool followtr = false;
 
-
+    
     void Start()
     {
         downPos = new Vector2(point1.transform.position.x, point1.transform.position.y);

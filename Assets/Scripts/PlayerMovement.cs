@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) == false)
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp")) == false)
         {
             return;
         }

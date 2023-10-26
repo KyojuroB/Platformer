@@ -33,5 +33,7 @@ public class DestroyingBlock : MonoBehaviour
 
         }
 
+        // triggerobj.GetComponent<PressureCubePlate>().IsOn()
+
     }
 }
