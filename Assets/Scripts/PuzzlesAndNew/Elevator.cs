@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.XR;
 using UnityEngine;
 
 public class Elevator : MonoBehaviour
@@ -16,8 +17,8 @@ public class Elevator : MonoBehaviour
     [SerializeField] float waitTime = 3;
     [SerializeField] bool ups = false;
     bool followtr = false;
-
-    
+    bool isATrigger;
+    [SerializeField] GameObject trigger;
     void Start()
     {
         downPos = new Vector2(point1.transform.position.x, point1.transform.position.y);
@@ -28,7 +29,18 @@ public class Elevator : MonoBehaviour
     }
     void Update()
     {
-        moving();
+        if (!isATrigger)
+        {
+            moving();
+        }
+        if (isATrigger)
+        {
+            if (trigger.GetComponent<PressurePlate>().IsOn())
+            {
+                moving();
+            }
+        }
+    
     }
 
     void moving()

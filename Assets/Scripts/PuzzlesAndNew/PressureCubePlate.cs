@@ -28,16 +28,12 @@ public class PressureCubePlate : MonoBehaviour
                 istouching = true;
                 return;
             }
-            else
-            {
-                myanim.SetBool("isOff", false);
-                isDown = false;
-                istouching = true;
-                return;
-            }
+
         }
         if (triggerCollider.IsTouchingLayers(LayerMask.GetMask("CubePickUp")) == false)
         {
+            myanim.SetBool("isOff", false);
+            isDown = false;
             istouching = false;
         }
     }
