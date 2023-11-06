@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SPA_Rock_Grass_Water_19
+  m_Name: stair
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1659944574, guid: 0214f7c6d3dfdc3438fcc76f4063a269, type: 3}
-  m_Color: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  m_Sprite: {fileID: 1931848110, guid: 9f361d7a721e6444e9e54c748234b485, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
