@@ -23,7 +23,7 @@ TagManager:
   - Coin
   - AtackCollider
   - CubePickUp
-  - 
+  - Water
   - 
   - 
   - 
@@ -45,14 +45,14 @@ TagManager:
   - name: Backgorund
     uniqueID: 3267851757
     locked: 0
+  - name: Water
+    uniqueID: 3589447097
+    locked: 0
   - name: Platforms
     uniqueID: 3017411547
     locked: 0
   - name: Ladder
     uniqueID: 1070811527
-    locked: 0
-  - name: Water
-    uniqueID: 3589447097
     locked: 0
   - name: Enemy
     uniqueID: 2171117445

@@ -21,7 +21,7 @@ public class DestroyingBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isBlock == false)
+        if (isBlock == false && triggerobj != null)
         { 
             if (triggerobj.GetComponent<PressurePlate>().IsOn())
             {
@@ -38,7 +38,7 @@ public class DestroyingBlock : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////////
         
-        if (isBlock == true)
+        if (isBlock == true && triggerobj != null)
         { 
             if (triggerobj.GetComponent<PressureCubePlate>().IsOn())
             {
