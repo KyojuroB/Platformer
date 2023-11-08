@@ -45,9 +45,6 @@ TagManager:
   - name: Backgorund
     uniqueID: 3267851757
     locked: 0
-  - name: Water
-    uniqueID: 3589447097
-    locked: 0
   - name: Platforms
     uniqueID: 3017411547
     locked: 0
@@ -68,6 +65,9 @@ TagManager:
     locked: 0
   - name: Elevator
     uniqueID: 4123487007
+    locked: 0
+  - name: Water
+    uniqueID: 3589447097
     locked: 0
   - name: CubePickUp
     uniqueID: 3357844817
