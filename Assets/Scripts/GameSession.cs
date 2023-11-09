@@ -64,7 +64,7 @@ public class GameSession : MonoBehaviour
     private IEnumerator TakeLives()
     {
         playerLives--;
-        FindObjectOfType<HealthBar>().remove();
+       // FindObjectOfType<HealthBar>().remove();
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         asyncLoad = SceneManager.LoadSceneAsync(currentSceneIndex, LoadSceneMode.Single);

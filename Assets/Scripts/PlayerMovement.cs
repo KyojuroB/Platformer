@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
         if (value.isPressed)
         {
          
-            AudioSource.PlayClipAtPoint(jumpNoise, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(jumpNoise, Camera.main.transform.position, 0.43f);
             myRigidbody.velocity += new Vector2(0, JumpSpeed);
         }
     }
