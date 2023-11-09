@@ -7,8 +7,21 @@ public class SceneLoader : MonoBehaviour
 {
     public void ToGame()
     {
-   //     SceneManager.LoadScene();
-    }    
+        SceneManager.LoadScene("Level1");
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+    public void ToLore()
+    { 
+        ///
+    }
+    public void TOMenu()
+    {
+        SceneManager.LoadScene("Lobby");
+
+    }
 
     // Start is called before the first frame update
     void Start()

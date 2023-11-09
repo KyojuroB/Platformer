@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7463221879446338161
 SpriteRenderer:
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1428471047
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: -672664984, guid: 9880387b90fcb1c4698f861269a0983d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 3962049274169052132}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b6cdf3d0e9eace44bba06f6e23c13f17, type: 2}
+  m_Controller: {fileID: 9100000, guid: d82f9e9045e79494aa73af745135be10, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -217,3 +217,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d52637c2ceb8aa498a7608b27691d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchNoise: {fileID: 8300000, guid: cb2dfdb864a18cd428f518d6c907e904, type: 3}

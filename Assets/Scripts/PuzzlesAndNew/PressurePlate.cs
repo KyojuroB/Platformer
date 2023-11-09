@@ -8,6 +8,7 @@ public class PressurePlate : MonoBehaviour
     bool istouching = false;
     Animator myanim;
     BoxCollider2D triggerCollider;
+    [SerializeField] AudioClip switchNoise;
   
     void Start()
     {
@@ -23,6 +24,7 @@ public class PressurePlate : MonoBehaviour
             
             if (!isDown)
             {
+                AudioSource.PlayClipAtPoint(switchNoise, Camera.main.transform.position);
                 myanim.SetBool("isDown", true);
                 isDown = true;
                 istouching = true;
@@ -30,6 +32,7 @@ public class PressurePlate : MonoBehaviour
             }
             else
             {
+                AudioSource.PlayClipAtPoint(switchNoise, Camera.main.transform.position);
                 myanim.SetBool("isDown", false);
                 isDown = false;
                 istouching = true;

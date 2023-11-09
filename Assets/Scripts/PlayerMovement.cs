@@ -9,9 +9,9 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] float JumpSpeed = 15;
-    [SerializeField] float runSpeed = 8.5f;
+    [SerializeField] float runSpeed = 6.5f;
     [SerializeField] float ladderSpeed = 10f;
-
+    [SerializeField] AudioClip jumpNoise;
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
@@ -20,8 +20,10 @@ public class PlayerMovement : MonoBehaviour
     float gravitScaleAtStart;
     bool isAlive = true;
     public int health;
+    AudioSource aS;
+    [SerializeField] AudioClip bounce;
+    bool off = true;
 
-    
 
     void Start()
     {
@@ -30,13 +32,41 @@ public class PlayerMovement : MonoBehaviour
         bodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravitScaleAtStart = myRigidbody.gravityScale;
- 
+        aS = GetComponent<AudioSource>();
 
     }
 
 
     void Update()
     {
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Bouncing")) && off)
+        {
+            off = false; 
+
+            
+            AudioSource.PlayClipAtPoint(bounce, Camera.main.transform.position);
+        }
+
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Bouncing")) && !off)
+        {
+            
+            off = true;
+        }
+
+
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Speed")) )
+        {
+            runSpeed = 11f;
+
+           
+        }
+
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Speed")))
+        {
+
+            runSpeed = 6.5f;
+        }
+
         if (!isAlive)
         {
             return;
@@ -65,12 +95,14 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp")) == false)
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp, Speed")) == false)
         {
             return;
         }
         if (value.isPressed)
         {
+         
+            AudioSource.PlayClipAtPoint(jumpNoise, Camera.main.transform.position);
             myRigidbody.velocity += new Vector2(0, JumpSpeed);
         }
     }
@@ -97,7 +129,15 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.velocity = playervelocity;
         bool playerHasHorizontaSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         myAnimator.SetBool("isRunning", playerHasHorizontaSpeed);
-
+        if (!aS.isPlaying && playerHasHorizontaSpeed && myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp")))
+        {
+            aS.Play();
+        }
+        else if (aS.isPlaying && !playerHasHorizontaSpeed || !myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp")))
+        {
+            aS.Stop();
+        }
+            
 
 
     }

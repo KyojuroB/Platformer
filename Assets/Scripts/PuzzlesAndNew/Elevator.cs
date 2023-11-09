@@ -16,8 +16,7 @@ public class Elevator : MonoBehaviour
     [SerializeField] GameObject point2;
     [SerializeField] float waitTime = 3;
     [SerializeField] bool ups = false;
-    bool followtr = false;
-    bool isATrigger;
+    [SerializeField]bool isATrigger = false;
     [SerializeField] GameObject trigger;
     void Start()
     {

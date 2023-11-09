@@ -88,7 +88,7 @@ public class GameSession : MonoBehaviour
     {
         
         FindObjectOfType<ScenePersist>().ResetScenePersist();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Loss");
         Destroy(gameObject);
     }
     public void SetCheckpoint(GameObject obj)

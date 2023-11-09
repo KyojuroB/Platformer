@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -1, z: 0}
 --- !u!212 &3616779291962355644
 SpriteRenderer:
@@ -173,11 +173,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c439e7298ba4fc547b548023f2af2b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 4
   point1: {fileID: 0}
   point2: {fileID: 0}
   waitTime: 5.5
   ups: 0
+  isATrigger: 0
   trigger: {fileID: 0}
 --- !u!60 &2335386307772324616
 PolygonCollider2D:

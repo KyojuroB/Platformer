@@ -8,9 +8,13 @@ public class PressureCubePlate : MonoBehaviour
     bool istouching = false;
     Animator myanim;
     BoxCollider2D triggerCollider;
+    AudioSource myAudioSource;
+    [SerializeField] AudioClip myclip;
+    bool previousState = false;
 
     void Start()
     {
+        myAudioSource = GetComponent<AudioSource>();
         triggerCollider = GetComponent<BoxCollider2D>();
         myanim = GetComponent<Animator>();
     }
@@ -18,27 +22,30 @@ public class PressureCubePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (triggerCollider.IsTouchingLayers(LayerMask.GetMask("CubePickUp")) && istouching == false)
+        bool currentState = triggerCollider.IsTouchingLayers(LayerMask.GetMask("CubePickUp"));
+
+        if (currentState && !previousState)
         {
-
-            if (!isDown)
-            {
-                myanim.SetBool("isOff", true);
-                isDown = true;
-                istouching = true;
-                return;
-            }
-
+            // Box is placed on the pressure plate
+            myAudioSource.PlayOneShot(myclip);
+            myanim.SetBool("isOff", true);
+            isDown = true;
         }
-        if (triggerCollider.IsTouchingLayers(LayerMask.GetMask("CubePickUp")) == false)
+        else if (!currentState && previousState)
         {
+            // Box is lifted off the pressure plate
+            myAudioSource.PlayOneShot(myclip);
             myanim.SetBool("isOff", false);
             isDown = false;
-            istouching = false;
         }
+
+        istouching = currentState;
+        previousState = currentState;
     }
+
     public bool IsOn()
     {
         return isDown;
     }
 }
+
