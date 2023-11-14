@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     Animator animator;
     Rigidbody2D rb;
      PolygonCollider2D polyCollider;
+    [SerializeField] AudioClip dyingSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +25,11 @@ public class EnemyMovement : MonoBehaviour
         Animation();
         ///////////////
         if (polyCollider.IsTouchingLayers(LayerMask.GetMask("AtackCollider")) && Input.GetKey(KeyCode.Mouse0))
-        { 
+        {
+            AudioSource.PlayClipAtPoint(dyingSound, Camera.main.transform.position);
+            FindObjectOfType<PlayerMovement>().HitEnemy();
             Destroy(gameObject);
+
         }
     }
 

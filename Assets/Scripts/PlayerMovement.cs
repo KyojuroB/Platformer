@@ -19,12 +19,15 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider;
     float gravitScaleAtStart;
     bool isAlive = true;
-    public int health;
     AudioSource aS;
     [SerializeField] AudioClip bounce;
     bool off = true;
+    [SerializeField] float maxSpeed = 10f;
 
-
+    public void HitEnemy()
+    {
+        myAnimator.SetTrigger("hasHit");
+    }
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -36,9 +39,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+      //  myRigidbody.velocity = Vector3.ClampMagnitude(myRigidbody.velocity, maxSpeed);
+    }
 
     void Update()
     {
+        
         if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Bouncing")) && off)
         {
             off = false; 
@@ -154,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Die()
     {
-        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")) || bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")))
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water", "Projectile")) || bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water", "Projectile")))
         {
             isAlive = false;
             myAnimator.SetTrigger("isDead");

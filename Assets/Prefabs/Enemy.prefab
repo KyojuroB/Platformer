@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7098046979156341122
 SpriteRenderer:
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  dyingSound: {fileID: 8300000, guid: c3f6c6a3a602b2141b3d96c49b2b7959, type: 3}
 --- !u!61 &8668955487176668685
 BoxCollider2D:
   m_ObjectHideFlags: 0

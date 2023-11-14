@@ -49,6 +49,11 @@ public class GameSession : MonoBehaviour
     {
         return playerLives;
     }
+
+    public void SetHealth(int ammount)
+    { 
+        playerLives = ammount;
+    }
     public void DoDamage()
     {
         if (playerLives > 1)
