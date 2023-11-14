@@ -29,6 +29,7 @@ public class KillSwitch : MonoBehaviour
     public IEnumerator ending()
     {
 
+        Destroy(FindObjectOfType<boss>());
         audioSource.PlayOneShot(shot, 1f);
         transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
         Destroy(FindObjectOfType<AudioPlayer>().gameObject);

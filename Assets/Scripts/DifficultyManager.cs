@@ -18,12 +18,12 @@ public class DifficultyManager : MonoBehaviour
 
     public void Easy()
     { 
-        FindObjectOfType<GameSession>().SetHealth(6);
+        FindObjectOfType<GameSession>().SetHealth(4);
     }
 
     public void Medium()
     {
-        FindObjectOfType<GameSession>().SetHealth(4);
+        FindObjectOfType<GameSession>().SetHealth(3);
     }
     public void Hard()
     {

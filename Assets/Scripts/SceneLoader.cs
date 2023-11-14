@@ -14,8 +14,8 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
     public void ToLore()
-    { 
-        ///
+    {
+        SceneManager.LoadScene("Lore");
     }
     public void TOMenu()
     {

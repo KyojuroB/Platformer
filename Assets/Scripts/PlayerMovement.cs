@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp, Speed")) == false)
+        if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "CubePickUp", "Speed")) == false)
         {
             return;
         }
@@ -164,10 +164,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water", "Projectile")) || bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water", "Projectile")))
         {
-            isAlive = false;
-            myAnimator.SetTrigger("isDead");
-            FindObjectOfType<GameSession>().DoDamage();   
+
+
+            StartCoroutine(Dying());
         }
+    }
+    private IEnumerator Dying()
+    {
+       
+        isAlive = false;
+        myAnimator.SetTrigger("isDead");
+        yield return new WaitForSeconds(0.2f);
+        FindObjectOfType<GameSession>().DoDamage();
+
+
+
+
     }
 
 }

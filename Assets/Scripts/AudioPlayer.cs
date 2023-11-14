@@ -32,7 +32,7 @@ public class AudioPlayer : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
 
         // levels
-        List<string> scenesWithAudio = new List<string> { "Level1", "Level2", "Level4", "Level5", "Level6" };
+        List<string> scenesWithAudio = new List<string> { "Level1", "Level2", "Level3", "Level4", "Level5", "Level6" };
 
         if (!scenesWithAudio.Contains(currentSceneName))
         {
