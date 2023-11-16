@@ -4337,6 +4337,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1113738796519802321, guid: 8bca5e0d7a1993848982b36f75df8092, type: 3}
+      propertyPath: m_TagString
+      value: settingsbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383254966777710552, guid: 8bca5e0d7a1993848982b36f75df8092, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383254966777710552, guid: 8bca5e0d7a1993848982b36f75df8092, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6590789553832952745, guid: 8bca5e0d7a1993848982b36f75df8092, type: 3}
       propertyPath: m_Name
       value: Game Session
@@ -4384,6 +4396,10 @@ PrefabInstance:
     - target: {fileID: 6663872431064988932, guid: 8bca5e0d7a1993848982b36f75df8092, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8956815789611942384, guid: 8bca5e0d7a1993848982b36f75df8092, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

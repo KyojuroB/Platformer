@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UIElements;
 
 public class GameSession : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GameSession : MonoBehaviour
     {
        
        scoreText.text = score.ToString();
-   
+      
 
 
     }
@@ -33,6 +34,7 @@ public class GameSession : MonoBehaviour
     private void Awake()
     {
 
+
         int numberOfGameSessions = FindObjectsOfType<GameSession>().Length;
         if (numberOfGameSessions > 1)
         {
@@ -40,9 +42,11 @@ public class GameSession : MonoBehaviour
         }
         else
         {
+
             DontDestroyOnLoad(gameObject);
         }
-;
+
+
         
     }
     public int GetHealth()
@@ -87,6 +91,21 @@ public class GameSession : MonoBehaviour
              Debug.Log("checkpointWorked");
         }
 
+    }
+    private void FixedUpdate()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        // levels
+        List<string> scenesWithsettings = new List<string> { "Level1", "Level2", "Level3", "Level4", "Level5", "Level6" };
+
+        if (!scenesWithsettings.Contains(currentSceneName))
+        {
+            transform.GetChild(1).GetChild(2).gameObject.SetActive(false);
+        }
+        if (scenesWithsettings.Contains(currentSceneName))
+        {
+            transform.GetChild(1).GetChild(2).gameObject.SetActive(true);
+        }
     }
 
     private void ResetGameSession()
