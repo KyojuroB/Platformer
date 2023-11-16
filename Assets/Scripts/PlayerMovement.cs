@@ -174,7 +174,8 @@ public class PlayerMovement : MonoBehaviour
        
         isAlive = false;
         myAnimator.SetTrigger("isDead");
-        yield return new WaitForSeconds(0.2f);
+        myRigidbody.velocity = new Vector2(0, myRigidbody.velocity.y);
+        yield return new WaitForSeconds(0.45f);
         FindObjectOfType<GameSession>().DoDamage();
 
 
